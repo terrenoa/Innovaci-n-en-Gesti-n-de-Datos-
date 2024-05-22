@@ -15,10 +15,10 @@
     Correo electronico: emiliomasciarelli@gmail.com
     Link Github: https://github.com/EmiARG
 
-    Nombre y apellido:
-    Dni:
-    Correo electronico:
-    Link Github:
+    Nombre y apellido: Gastón Di Campli
+    Dni: 31055660
+    Correo electronico: gaston.dicampli@gmail.com
+    Link Github: https://github.com/Gdicampli22
 
     Nombre y apellido:
     Dni:
