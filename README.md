@@ -1,4 +1,4 @@
--Integrantes
+#Integrantes
 
     Nombre y apellido:
     Dni:
@@ -31,4 +31,4 @@
     Correo electronico:
     Link Github:
 
--Descripción del proyecto elegido:
+#Descripción del proyecto elegido:
