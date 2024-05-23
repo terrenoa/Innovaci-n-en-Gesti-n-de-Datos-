@@ -8,8 +8,8 @@
     Nombre y apellido: Alejo Nicolás Terreno
     Dni: 42783052    
     Correo electronico: anterreno12@gmail.com
-    Link Github: [https://github.com/terrenoa](https://github.com/terrenoa)
-    ejericios: [https://github.com/terrenoa/evidencia2](https://github.com/terrenoa/evidencia2)
+    Link Github: [github.com/terrenoa](https://github.com/terrenoa/)
+    Ejericios: [github.com/terrenoa/evidencia2](https://github.com/terrenoa/evidencia2/)
 
     Nombre y apellido: Emilio Masciarelli
     Dni: 33600010
