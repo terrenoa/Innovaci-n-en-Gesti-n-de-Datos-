@@ -14,7 +14,8 @@
     Nombre y apellido: Emilio Masciarelli
     Dni: 33600010
     Correo electronico: emiliomasciarelli@gmail.com
-    Link Github: [https://github.com/EmiARG](https://github.com/EmiARG)
+    Link Github: https://github.com/EmiARG
+    Ejercicios: https://github.com/EmiARG/solucionesPracticas
 
     Nombre y apellido: Gastón Di Campli
     Dni: 31055660
