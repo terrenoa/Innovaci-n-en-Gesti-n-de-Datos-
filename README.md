@@ -22,10 +22,10 @@
     Correo electronico: gaston.dicampli@gmail.com
     Link Github: https://github.com/Gdicampli22
 
-    Nombre y apellido:
-    Dni:
-    Correo electronico:
-    Link Github:
+    Nombre y apellido: Maria Lourdes Romero
+    Dni: 46973418
+    Correo electronico: lourdesromero843@gmail.com
+    Link Github: https://github.com/luliromero
 
     Nombre y apellido:
     Dni:
