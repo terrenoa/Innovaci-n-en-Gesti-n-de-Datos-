@@ -1,9 +1,9 @@
 # Integrantes
 
-    Nombre y apellido:
-    Dni:
-    Correo electronico:
-    Link Github:
+    Nombre y apellido: Valentino Lorenzati
+    Dni: 46508945
+    Correo electronico: valentinolorenzati@gmail.com
+    Link Github: https://github.com/VLorenzati/Personal
 
     Nombre y apellido: Alejo Nicolás Terreno
     Dni: 42783052    
