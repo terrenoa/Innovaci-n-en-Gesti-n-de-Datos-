@@ -73,3 +73,5 @@ si no se elige una opción valida se muestra un mensaje de error y el proceso se
 - option4: numero entero. Registra la opción especifica dentro de "obras sociales"
 - option5: numero entero. Registra la opción especifica dentro de "turnero"
 
+### Diagrama de flujo
+![hospital diagrama de flujo](https://github.com/EmiARG/ispcproyectointegrador/assets/85424039/949d243b-9ddf-4e4e-8126-782abd2d8fca)
