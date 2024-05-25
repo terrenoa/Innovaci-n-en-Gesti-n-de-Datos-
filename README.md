@@ -39,15 +39,37 @@ El objetivo es centralizar la información respecto a:
   - alta/registro de paciente
   - modificación de paciente
   - baja de paciente
-- GEstiones para Profesionales
+- Gestiones para Profesionales
   - alta/registro de paciente
   - modificación de paciente
   - baja de paciente
-- Servicios ofrecidos
-    -consulta de servicios ofrecidos
--Obras Sociales
-- Turnero.
-En esta primera etapa lo que se plantea como solución es un una interface que le permita al administrativo del hospital 
+- Servicios médicos
+  - consultar si un servicio es ofercido por el hospital
+  - consultar la lista de todos los servicios ofrecidos
+- Obras sociales
+  - consultar si una obra social es recibida por el hospital
+  - consultar la lista de todos las obras sociales recibidas
+- Turnero
+  - nuevo turno
+  - consultar turnos
+  - eliminar turno
+  
+En esta primera etapa lo que se plantea como solución es un una interfase que le permita al administrativo del hospital navegar entre las opciones que ofrece el programa.
 
-## Datos de entrada
+### Datos de entrada:
+El usuario la opción a la que quiere navegar ingresando un número entero.
+### Datos de salida:
+Listado de opciones que se muestra por pantalla
+### Proceso:
+El programa muestra una serie de opciones iniciales,
+el usuario debe elegir una de las opciones ingresando uno de los números solicitados,
+según sea la opción elegida el programa muestra una nueva lista de opciones específicas,
+si no se elige una opción valida se muestra un mensaje de error y el proceso se reinicia.
+### Variables:
+- option: numero entero. Registra la opción elegida.
+- option1: numero entero. Registra la opción especifica dentro de "gestiones para pacientes"
+- option2: numero entero. Registra la opción especifica dentro de "gestiones para pprofesionales"
+- option3: numero entero. Registra la opción especifica dentro de "servicios médicos"
+- option4: numero entero. Registra la opción especifica dentro de "obras sociales"
+- option5: numero entero. Registra la opción especifica dentro de "turnero"
 
