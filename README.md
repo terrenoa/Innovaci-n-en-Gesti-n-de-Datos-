@@ -27,10 +27,10 @@
     Correo electronico: lourdesromero843@gmail.com
     Link Github: https://github.com/luliromero
 
-    Nombre y apellido:
-    Dni:
-    Correo electronico:
-    Link Github:
+    Nombre y apellido: Lucila Natali Peire Moyano
+    Dni: 39498736
+    Correo electronico: lucipeire@gmail.com
+    Link Github: https://github.com/Lucipeire
 
 # Descripción del proyecto elegido:
 El proyecto propuesto para esta instacia es el desarrollo de una aplicacion que facitile la gestion y administracion un hospital.
