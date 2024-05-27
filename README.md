@@ -3,7 +3,7 @@
     Nombre y apellido: Valentino Lorenzati
     Dni: 46508945
     Correo electronico: valentinolorenzati@gmail.com
-    Link Github: https://github.com/VLorenzati/Personal
+    Link Github: https://github.com/VLorenzati
     Ejercicios: https://github.com/VLorenzati/solucionesPracticas
 
     Nombre y apellido: Alejo Nicolás Terreno
