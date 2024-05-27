@@ -4,6 +4,7 @@
     Dni: 46508945
     Correo electronico: valentinolorenzati@gmail.com
     Link Github: https://github.com/VLorenzati/Personal
+    Ejercicios: https://github.com/VLorenzati/solucionesPracticas
 
     Nombre y apellido: Alejo Nicolás Terreno
     Dni: 42783052    
