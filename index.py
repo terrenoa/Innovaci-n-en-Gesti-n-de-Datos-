@@ -1,6 +1,11 @@
-# Programa de gestión hospitalaria
+# index_hospital.py
 
-# import los archivos con las funciones de cada una de las opciones
+# Importa las funciones desde sus archivos individuales
+from gestiones_para_pacientes import gestiones_para_pacientes
+from gestiones_para_profesionales import gestiones_para_profesionales
+from servicios_medicos import servicios_medicos
+from obras_sociales import obras_sociales
+from turnero import turnero
 
 def index_hospital():
     while True:
@@ -32,4 +37,5 @@ def index_hospital():
         else:
             print('OPCIÓN INVÁLIDA')
 
+# Ejecuta el programa principal
 index_hospital()
