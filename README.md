@@ -78,7 +78,7 @@ si no se elige una opción valida se muestra un mensaje de error y el proceso se
 ![hospital diagrama de flujo](https://github.com/EmiARG/ispcproyectointegrador/assets/85424039/949d243b-9ddf-4e4e-8126-782abd2d8fca)
 
 
-**Detalle de la Aplicación Modularizada**
+### Detalle de la Aplicación Modularizada
 Esta aplicación está diseñada siguiendo un enfoque modular, lo que significa que está dividida en varios archivos .py que cumplen funciones específicas . A continuación, se describe brevemente el propósito de cada archivo:
 
 • index.py
