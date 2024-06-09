@@ -27,6 +27,7 @@
     Dni: 46973418
     Correo electronico: lourdesromero843@gmail.com
     Link Github: https://github.com/luliromero
+    Ejercicios: https://github.com/luliromero/IP_BDI-ISPC/tree/master/Programaci%C3%B3n/solucionesPr%C3%A1cticas
 
     Nombre y apellido: Lucila Natali Peire Moyano
     Dni: 39498736
