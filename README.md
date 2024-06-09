@@ -76,3 +76,25 @@ si no se elige una opción valida se muestra un mensaje de error y el proceso se
 
 ### Diagrama de flujo
 ![hospital diagrama de flujo](https://github.com/EmiARG/ispcproyectointegrador/assets/85424039/949d243b-9ddf-4e4e-8126-782abd2d8fca)
+
+
+**Detalle de la Aplicación Modularizada**
+Esta aplicación está diseñada siguiendo un enfoque modular, lo que significa que está dividida en varios archivos .py que cumplen funciones específicas . A continuación, se describe brevemente el propósito de cada archivo:
+
+index.py
+Este archivo es el punto de entrada principal de la aplicación. Contiene la lógica principal de la aplicación y se encarga de coordinar la interacción entre los diferentes módulos.
+
+gestiones_para_pacientes.py
+En este archivo se encuentran las funciones relacionadas con las gestiones de pacientes.  Va a manejar las operaciones de alta, modificación y baja de pacientes en la base de datos del hospital.
+
+gestiones_para_profesionales.py
+En este archivos encontramos las  funciones relacionadas con las gestiones relacionadas con los profesionales. Gestiona las operaciones de alta, modificación y baja de profesionales médicos en la base de datos del hospital.
+
+obras_sociales.py
+Este archivo contiene las funciones que van a relacionarse con la consulta de si una obra social es recibida por el hospital y obtener la lista de todas las obras sociales recibidas.
+
+servicios_medicos.py
+En este archivo encontramos las funciones que van a estar relacionados con los tipos de servicios y especialidades ofrecidos por el hospital.
+
+turnero.py
+Maneja las operaciones relacionadas con el turnero, como la creación de nuevos turnos, consulta de turnos y eliminación de turnos.
