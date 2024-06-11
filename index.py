@@ -1,22 +1,30 @@
 # index_hospital.py
 
 # Importa las funciones desde sus archivos individuales
-from gestiones_para_pacientes import gestiones_para_pacientes
+from gestiones_para_pacientes import gestiones_para_pacientes 
 from gestiones_para_profesionales import gestiones_para_profesionales
 from servicios_medicos import servicios_medicos
 from obras_sociales import obras_sociales
 from turnero import turnero
 import mysql.connector
+from mysql.connector import Error
 
-HOST = "localhost"
-USER = "root"#
-PASSWORD = "12345"#
-BD = "script"#nacidos
+try:
+    conexion = mysql.connector.connect(
+           host="localhost",
+           port=3306,
+           user="root",
+           password="74269851vV",
+           db="mydb" 
+    )
+    if conexion.is_connected():
+         print("Conexión exitosa a la base de datos")
+except Error as ex:
+      print("Error durante la conexion.", ex)
 
-mydb = mysql.connector.connect(
-  host="localhost",user=USER,
-  password=PASSWORD,database=BD
-)
+cursor = conexion.cursor()
+
+
 
 
 
