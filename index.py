@@ -43,16 +43,22 @@ def index_hospital():
         option = input('Ingrese la opción deseada: ')
     
         if option == '1':
+            print("\n")
             gestiones_para_pacientes()
         elif option == '2':
+            print("\n")
             gestiones_para_profesionales()
         elif option == '3':
+            print("\n")
             servicios_medicos()
         elif option == '4':
+            print("\n")
             obras_sociales()
         elif option == '5':
+            print("\n")
             turnero()
         elif option == '6':
+            print("\n")
             print('SESIÓN TERMINADA')
             break
         else:

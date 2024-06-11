@@ -159,10 +159,78 @@ def listado_profesionales():
           print(profesional)
 listado_profesionales()
 """
-
+"""
 def eliminar_profesionales():
         cuil_el = input("Ingrese el cuil del profesional a dar de baja: ")
         sql = "DELETE FROM profesionales WHERE cuil=%s"
         cursor.execute(sql,(cuil_el,))
         conexion.commit()
 eliminar_profesionales()
+
+"""
+"""
+cuil_in = input("Ingrese el cuil del profesional: ")
+nombre_in = input("Ingrese el nombre: ")
+apellido_in = input("Ingrese el apellido: ")
+
+def crear_profesionales(cuil, nombre, apellido): 
+        sql = "INSERT INTO profesionales (cuil, nombre, apellido) VALUES ('{}','{}','{}')".format(cuil, nombre, apellido,) 
+        values = ()
+        cursor.execute(sql)
+        conexion.commit()
+
+crear_profesionales(cuil_in, nombre_in, apellido_in)
+"""
+"""
+nombreO_in = input("Ingresar el nombre de la Obra Social: ")
+def crear_obras(nombre):
+     sql = "INSERT INTO obras (nombre) VALUES('{}')".format(nombre,)
+     values = ()
+     cursor.execute(sql)
+     conexion.commit()
+
+crear_obras(nombreO_in)
+
+"""
+"""
+def actualizar_obras():
+    id_in = input("Ingrese el id de la Obra Social a modificar: ") 
+    sql = "UPDATE obras SET nombre=%s WHERE idOS=%s"
+    nombre_in = input("Ingrese el nombre: ")
+    cursor.execute(sql, (nombre_in, id_in,))
+    conexion.commit()
+
+actualizar_obras()
+
+"""
+"""
+def eliminar_obras():
+        id_in = input("Ingrese el id de la Obra Social a eliminar: ")
+        sql = "DELETE FROM obras WHERE idOS=%s"
+        cursor.execute(sql,(id_in,))
+        conexion.commit()
+
+eliminar_obras()
+"""
+"""
+def listado_obras():
+    cursor.execute("SELECT * from obras")
+    obras = cursor.fetchall()
+    print("Listado de obras:")
+    for obra in obras:
+        print(obra)
+
+listado_obras()
+"""
+
+
+
+nombreO_in = input("Ingrese el nombre nde la Obra Social: ")
+def crear_obras(nombre):
+     sql = "INSERT INTO obras (nombre) VALUES ('{}')".format(nombre)
+     values = ()
+     cursor.execute(sql)
+     conexion.commit()
+
+
+crear_obras(nombreO_in)

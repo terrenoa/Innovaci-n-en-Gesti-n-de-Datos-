@@ -77,7 +77,9 @@ def gestiones_para_profesionales():
             eliminar_profesionales()
 
         elif option_pac == '4':
+            print("\n")
             listado_profesionales()
+            print("\n")
 
         elif option_pac == '5':
             print('SESIÓN TERMINADA')

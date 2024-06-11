@@ -83,7 +83,9 @@ def gestiones_para_pacientes():
             eliminar_paciente()
 
         elif option_pac == '4':
+            print("\n")
             listado_paciente()
+            print("\n")
         elif option_pac == '5':
             print('SESIÓN TERMINADA')
             break
