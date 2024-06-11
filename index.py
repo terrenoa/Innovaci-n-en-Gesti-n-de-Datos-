@@ -6,6 +6,19 @@ from gestiones_para_profesionales import gestiones_para_profesionales
 from servicios_medicos import servicios_medicos
 from obras_sociales import obras_sociales
 from turnero import turnero
+import mysql.connector
+
+HOST = "localhost"
+USER = "root"#
+PASSWORD = "12345"#
+BD = "script"#nacidos
+
+mydb = mysql.connector.connect(
+  host="localhost",user=USER,
+  password=PASSWORD,database=BD
+)
+
+
 
 def index_hospital():
     while True:
