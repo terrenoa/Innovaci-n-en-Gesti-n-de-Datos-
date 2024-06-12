@@ -1,30 +1,37 @@
 # Archivo gestiones_para_pacientes.py es un archivo donde se gestionaran el ABM del paciente.
+#se importan las librerias necesarias para poder conectar la aplicación con la base de datos
+
 import mysql.connector
 from mysql.connector import Error
 
-try:
+#Conexión con la base de datos
+try:                                                           #intenta
     conexion = mysql.connector.connect(
            host="localhost",
            port=3306,
            user="root",
-           password="74269851vV",
+           password="74269851vV", #Debe modificarse según los parametros de mysql en la pc donde se ejecute
            db="mydb" 
     )
     if conexion.is_connected():
          print("Conexión exitosa a la base de datos")
-except Error as ex:
+except Error as ex:                                         #si no puede acusa error
       print("Error durante la conexion.", ex)
-cursor = conexion.cursor()
+cursor = conexion.cursor() #el cursor permite ejecutar consultas en sql e interactuar con los datos de la bd
 
-
+# Permite la inclusion de nuevos pacientes a la base de datos a paritr de la consulta INSERT
+# La consulta se almacena en la variable sql y a traves del cursor interactua con la bd
 def crear_paciente(dni, nombre, apellido, telefono, direccion, fecha_nacimiento, ObraS_idObraS): 
         sql = "INSERT INTO pacientes (dni, nombre, apellido, telefono, direccion, fecha_nacimiento, ObraS_idObraS) VALUES ('{}','{}','{}','{}','{}','{}','{}')".format(dni, nombre, apellido, telefono, direccion, fecha_nacimiento, ObraS_idObraS) 
         values = ()
-        cursor.execute(sql)
-        conexion.commit()
+        cursor.execute(sql) #ejecuta la consulta
+        conexion.commit() #guarda los cambios
 
+#Permite la edicion de un registro en la tabla de pacientes a partir de la consulta UPDATE
+#Almacena los nuevos valores de las columnas en variables referenciales y con el cursor se insteran en la bd
+#La información vieja se pierde
 def actualizar_paciente():
-      dni_in = input("Ingrese el dni del paciente a modificar: ") 
+      dni_in = input("Ingrese el dni del paciente a modificar: ") #se utiliza como PK el dni para localizar el registro que se quiere modificar
       sql = "UPDATE pacientes SET nombre=%s, apellido=%s, telefono=%s, direccion=%s, fecha_nacimiento=%s, ObraS_idObras=%s WHERE dni=%s"
       nombre_act = input("Ingrese el nombre: ")
       apellido_act = input("Ingrese el apellido: ")
@@ -32,15 +39,18 @@ def actualizar_paciente():
       direccion_act = input("Ingrese la direccion: ")
       fecha_nacimiento_act = input("Ingrese la fecha de nacimiento: ")
       ObraS_idObras_act = input("Ingrese el id de la obra social: ")
-      cursor.execute(sql, (nombre_act, apellido_act, telefono_act, direccion_act, fecha_nacimiento_act, ObraS_idObras_act, dni_in))
-      conexion.commit()
+      cursor.execute(sql, (nombre_act, apellido_act, telefono_act, direccion_act, fecha_nacimiento_act, ObraS_idObras_act, dni_in)) #ejecuta la consulta
+      conexion.commit() #guarda los cambios
 
+
+#Permite eliminar un registro de la bd a partir de la consulta DELETE
 def eliminar_paciente():
-        dni_el = input("Ingrese el DNI del paciente a dar de baja: ")
+        dni_el = input("Ingrese el DNI del paciente a dar de baja: ") #se utiliza como PK el dni para localizar el registro que se quiere modificar
         sql = "DELETE FROM pacientes WHERE dni=%s"
-        cursor.execute(sql,(dni_el,))
-        conexion.commit()
+        cursor.execute(sql,(dni_el,))#ejecuta la consulta
+        conexion.commit()#guarda los cambios
 
+#Esta consulta muestra un listado de toda la tabla
 def listado_paciente():
      cursor.execute("SELECT * from pacientes")
      pacientes = cursor.fetchall()
@@ -48,11 +58,13 @@ def listado_paciente():
      for paciente in pacientes:
           print(paciente)
 
+#Funcion principal del archivo
+#Aplica todas las funciones definidas arriba
+#se implementa en el archivo index.py
 def gestiones_para_pacientes():
-    # Implementación de la función
     print("Gestiones para pacientes")
 
-    while True:
+    while True: #menu de opciones, cada funcion se relaciona con una opcion
         print('Elija una de las siguientes opciones:')
         print('1. Agregar Paciente')
         print('2. Modificar Paciente')
