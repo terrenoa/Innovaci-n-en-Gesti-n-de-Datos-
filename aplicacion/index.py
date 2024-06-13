@@ -9,16 +9,22 @@ from turnero import turnero
 import mysql.connector
 from mysql.connector import Error
 
+#inicializacion de variables
+conexion = None
+cursor = None
+
+
 try:
     conexion = mysql.connector.connect(
            host="localhost",
            port=3306,
            user="root",
-           password="74269851vV",
+           password="85956123",
            db="mydb" 
     )
     if conexion.is_connected():
          print("Conexión exitosa a la base de datos")
+         
 except Error as ex:
       print("Error durante la conexion.", ex)
 
