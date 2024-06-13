@@ -1,6 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
-
+from gestiones_para_pacientes import gestiones_para_pacientes
 try:
     conexion = mysql.connector.connect(
            host="localhost",
@@ -224,13 +224,4 @@ listado_obras()
 """
 
 
-
-nombreO_in = input("Ingrese el nombre nde la Obra Social: ")
-def crear_obras(nombre):
-     sql = "INSERT INTO obras (nombre) VALUES ('{}')".format(nombre)
-     values = ()
-     cursor.execute(sql)
-     conexion.commit()
-
-
-crear_obras(nombreO_in)
+gestiones_para_pacientes()
