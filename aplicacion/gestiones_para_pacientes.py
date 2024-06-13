@@ -1,9 +1,32 @@
 # Archivo gestiones_para_pacientes.py es un archivo donde se gestionaran el ABM del paciente.
+<<<<<<< Updated upstream
 #se importan las librerias necesarias para poder conectar la aplicación con la base de datos
 
 import mysql.connector
 from mysql.connector import Error
 
+#CONEXIÓN CON LA BASE DE DATOS
+try:  
+#inteta la conexión
+    conexion = mysql.connector.connect(
+           host="localhost",
+           port=3306,
+           user="root",
+           password="74269851vV",
+           db="mydb" 
+           #Debe modificarse según los parametros de mysql en la pc donde se ejecute
+    )
+    if conexion.is_connected():
+         print("Conexión exitosa a la base de datos")
+except Error as ex:
+#si no puede acusa error
+      print("Error durante la conexion.", ex)
+cursor = conexion.cursor() 
+#el cursor permite ejecutar consultas en sql e interactuar con los datos de la bd
+
+=======
+
+>>>>>>> Stashed changes
 
 
 def crear_paciente(dni, nombre, apellido, telefono, direccion, fecha_nacimiento, ObraS_idObraS): 
@@ -104,5 +127,4 @@ def gestiones_para_pacientes():
             break
         else:
             print('OPCIÓN INVÁLIDA')
-
 
