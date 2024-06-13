@@ -58,16 +58,16 @@ El objetivo es centralizar la información respecto a:
   
 En esta primera etapa lo que se plantea como solución es un una interfase que le permita al administrativo del hospital navegar entre las opciones que ofrece el programa.
 
-# Datos de entrada:
+### Datos de entrada:
 El usuario la opción a la que quiere navegar ingresando un número entero.
-# Datos de salida:
+### Datos de salida:
 Listado de opciones que se muestra por pantalla
-# Proceso:
+### Proceso:
 El programa muestra una serie de opciones iniciales,
 el usuario debe elegir una de las opciones ingresando uno de los números solicitados,
 según sea la opción elegida el programa muestra una nueva lista de opciones específicas,
 si no se elige una opción valida se muestra un mensaje de error y el proceso se reinicia.
-# Variables:
+### Variables:
 - option: numero entero. Registra la opción elegida.
 - option1: numero entero. Registra la opción especifica dentro de "gestiones para pacientes"
 - option2: numero entero. Registra la opción especifica dentro de "gestiones para pprofesionales"
@@ -75,13 +75,13 @@ si no se elige una opción valida se muestra un mensaje de error y el proceso se
 - option4: numero entero. Registra la opción especifica dentro de "obras sociales"
 - option5: numero entero. Registra la opción especifica dentro de "turnero"
 
-# Diagrama de flujo
+### Diagrama de flujo
 ![hospital diagrama de flujo](https://github.com/EmiARG/ispcproyectointegrador/assets/85424039/949d243b-9ddf-4e4e-8126-782abd2d8fca)
 
 
-### Modularización y guia del repositorio
+# Modularización y guia del repositorio
 Esta aplicación está diseñada siguiendo un enfoque modular, lo que significa que está dividida en varios archivosque cumplen funciones específicas. Loss archivos se encuentran organizados en carpetas para facilitar su identificación y mantener los archivos ordenados y prolijos.
-# Carpeta aplicacion
+### Carpeta aplicacion
 Esta carpeta contiene los archivos .py donde se encuentran distribuidas las funciones e implementaciónes que componen nuestra aplicación.
 A continuación, se describe brevemente el propósito de cada archivo:
 
@@ -112,7 +112,7 @@ Este es el archivo mas complejo e importante del programa, a partir de todos los
 - servicios_medicos.py
 Este archivo fomraba parte de la concepcion original del proyecto pero con la evolucion decidimos posponer su implementación y reemplazarlo por el archivo especialidad.py que se ajustaba mejor a las caracteristicas de la consigna. Sin embargo preferimos no eliminarlo con la intencion de que en una futura actualización pueda ser una caracteristica que le de valor agregado al programa.
 
-# Carpeta base de datos
+### Carpeta base de datos
 - diagrama entidad realcion.pdf
 DER de la primera concepcion de la base de datos diseñada para el proyecto
 
@@ -134,10 +134,10 @@ Este archivo contiene todas las consultas realizadas a la base de datos para pod
 - datos.sql
 Datos alojados en la database, daots ficticios insertados en la base de datos para probar su funcionamiento.
 
-# Carpeta prueba
+### Carpeta prueba
 En esta carpeta se encuentran archivos que fueron utilizados para hacer pruebas y experimentar con las herramientas disponibles para lograr la materialización del proyecto, pero no agregan funcionalidad alguna.
 
-### Requisitos y puesta en marcha.
+# Requisitos y puesta en marcha.
 Antes de iniciar el programa es necesario tener instalado python, la libreria de python mysql.connector; y mysql.
 Esta aplicación no cuenta con una interfaz gráfica por lo que debe ser ejecutada desde consola.
 ## Paso a paso
