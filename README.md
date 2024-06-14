@@ -131,8 +131,9 @@ Archivo que contiene el esquema de la base de datos utilizada en el programa.
 - DML.sql
 Este archivo contiene todas las consultas realizadas a la base de datos para poder lograr las funciones implementadas en la el programa.
 
-- datos.sql
-Datos alojados en la database, daots ficticios insertados en la base de datos para probar su funcionamiento.
+### Carpeta dump_datos
+
+Contiene los archivos script de los datos alojados en la database, datos ficticios insertados en la base de datos para probar su funcionamiento
 
 ### Carpeta prueba
 En esta carpeta se encuentran archivos que fueron utilizados para hacer pruebas y experimentar con las herramientas disponibles para lograr la materialización del proyecto, pero no agregan funcionalidad alguna.

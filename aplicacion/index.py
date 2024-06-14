@@ -9,22 +9,17 @@ from turnero import turnero
 import mysql.connector
 from mysql.connector import Error
 
-#inicializacion de variables
-conexion = None
-cursor = None
-
 
 try:
     conexion = mysql.connector.connect(
            host="localhost",
            port=3306,
            user="root",
-           password="85956123",
+           password="74269851vV",
            db="mydb" 
     )
     if conexion.is_connected():
          print("Conexión exitosa a la base de datos")
-         
 except Error as ex:
       print("Error durante la conexion.", ex)
 
@@ -36,6 +31,7 @@ cursor = conexion.cursor()
 
 def index_hospital():
     while True:
+        print("\n"*3)
         print('******HOSPITAL HOSPITAL******')
         print('Bienvenido al programa de gestión hospitalaria')
         print('Elija una de las siguientes opciones:')
