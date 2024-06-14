@@ -1,5 +1,10 @@
 # obras_sociales.py
 import mysql.connector
+from obras_especialidad import crear_obras_espe
+from obras_especialidad import eliminar_obras_espe
+from obras_especialidad import list_obras_espe
+
+
 from mysql.connector import Error
 conexion = mysql.connector.connect(
            host="localhost",
@@ -50,8 +55,11 @@ def obras_sociales():
         print('1. Agregar Obra Social')
         print('2. Modificar Obra Social')
         print('3. Eliminar Obra Social')
-        print('4. Listado')
-        print('5. Salir')
+        print('4. Listado de Obras Sociales')
+        print('5. Asignar Especialidad a Obra Social')
+        print('6. Quitar Especialidad a Obra Social')
+        print('7. Listado de Obras Sociales y Especialidades')
+        print('8. Salir')
     
         option_pac = input('Ingrese la opción deseada: ')
     
@@ -72,12 +80,35 @@ def obras_sociales():
             print("\n")
             listado_obras()
             print("\n")
-
+        
         elif option_pac == '5':
+            cursor.execute("SELECT * from obras")
+            obras = cursor.fetchall()
+            print("Listado de obras:")
+            for obra in obras:
+                print(obra)
+            cursor.execute("SELECT * from especialidad")
+            especialidades = cursor.fetchall()
+            print("Listado de especialidades:")
+            for especialidad in especialidades:
+                print(especialidad)
+
+            obras_in = input("Ingrese el id de la Obra Social: ")
+            espe_in = input("Ingrese el id de la Especialidad: ")
+            crear_obras_espe(obras_in, espe_in)
+        
+        elif option_pac == '6':
+            eliminar_obras_espe()
+        
+        elif option_pac == '7':
+            print("\n")
+            list_obras_espe()
+            print("\n")
+
+        elif option_pac == '8':
             print('SESIÓN TERMINADA')
             break
         else:
             print('OPCIÓN INVÁLIDA')
-
 
 
