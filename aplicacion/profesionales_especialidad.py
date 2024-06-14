@@ -90,4 +90,3 @@ def profesional_especialidad():
         else:
             print('OPCIÓN INVÁLIDA')
 
-profesional_especialidad()

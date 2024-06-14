@@ -1,19 +1,17 @@
 # gestiones_para_profesionales.py es un archivo donde se gestionaran el ABM del profesionales
 import mysql.connector
 from mysql.connector import Error
-
-try:
-    conexion = mysql.connector.connect(
-           host="localhost",
-           port=3306,
-           user="root",
-           password="74269851vV",
-           db="mydb" 
+from profesionales_especialidad import crear_prof_espe
+from profesionales_especialidad import list_prof_espe
+from profesionales_especialidad import eliminar_prof_espe
+conexion = mysql.connector.connect(
+        host="localhost",
+        port=3306,
+        user="root",
+        password="74269851vV",
+        db="mydb" 
     )
-    if conexion.is_connected():
-         print("Conexión exitosa a la base de datos")
-except Error as ex:
-      print("Error durante la conexion.", ex)
+
 cursor = conexion.cursor()
 
 
@@ -39,7 +37,7 @@ def eliminar_profesionales():
         conexion.commit()
 
 def listado_profesionales():
-     cursor.execute("SELECT * from profesionales")
+     cursor.execute("SELECT * from profesionales LIMIT 10")
      profesionales = cursor.fetchall()
      print("Listado de Profesionales:")
      for profesional in profesionales:
@@ -50,12 +48,16 @@ def gestiones_para_profesionales():
     print("Gestiones para profesionales")
 
     while True:
+        print('\n')
         print('Elija una de las siguientes opciones:')
         print('1. Agregar Profesional')
         print('2. Modificar Profesional')
         print('3. Baja Profesional')
-        print('4. Listado')
-        print('5. Salir')
+        print('4. Listado de Profesionales')
+        print('5. Asignar Especialidad')
+        print('6. Eliminar Especialidad')
+        print('7. Listado de Profesionales y Especialidades')
+        print('8. Salir')
     
         option_pac = input('Ingrese la opción deseada: ')
     
@@ -81,8 +83,39 @@ def gestiones_para_profesionales():
             listado_profesionales()
             print("\n")
 
+        
         elif option_pac == '5':
+            print("\n")
+            cursor.execute("SELECT * from profesionales")
+            profesionales = cursor.fetchall()
+            print("Listado ID de Profesionales:")
+            for profesional in profesionales:
+                print(profesional)
+            
+            cursor.execute("SELECT * from especialidad")
+            especialidades = cursor.fetchall()
+            print("Listado ID de especialidades:")
+            for especialidad in especialidades:
+                print(especialidad)
+            
+            prof_in = input("Ingrese el ID del profesional: ")
+            espe_in = input("Ingrese el ID   de la especialidad: ")
+            crear_prof_espe(prof_in, espe_in)
+
+        
+        elif option_pac == '6':
+            eliminar_prof_espe()
+
+        
+        elif option_pac == '7':
+            print("\n")
+            list_prof_espe()
+
+
+        elif option_pac == '8':
             print('SESIÓN TERMINADA')
             break
         else:
             print('OPCIÓN INVÁLIDA')
+
+
