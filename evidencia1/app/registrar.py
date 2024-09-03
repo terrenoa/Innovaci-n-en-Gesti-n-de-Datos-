@@ -1,6 +1,26 @@
+import random
+
 usuarios = {}
 
-   
+usuarios = {'pepitoL': {'nombre': 'Pepe', 'apellido': 'Lorenzati', 'dni': '46508945', 'correo': 'peep@gmasdm.c', 'fecha_nacimiento': '18/06/2205', 'clave': '123456'},
+            'pepito23': {'nombre': 'Pepe3', 'apellido': 'Lorenzati', 'dni': '46508945', 'correo': 'peep@gmasdm.c', 'fecha_nacimiento': '18/06/2205', 'clave': '123456'}}
+
+
+def inicio_sesion():
+    nombre_usuario = input("Ingrese el nombre de usuario: ")
+    control = False
+    for x in usuarios:
+        if nombre_usuario == x:
+            control = True
+        else:
+            control = False
+    if control == False: #el usuario no existe
+         print("usuario no econtrado: ")
+         opcion = int(input ("para registrar ingrese 1: "))
+         if opcion == 1:
+             registrar_usuario()
+             
+
 
 def registrar_usuario():
     nombre = input("Ingrese su nombre: ")
@@ -18,10 +38,8 @@ def registrar_usuario():
     'correo': correo,
     'fecha_nacimiento': fecha_nacimiento,
     'clave': clave }
+    print ("Usuario registrado con éxito!!")
 
-
-registrar_usuario()
-registrar_usuario()
-
-
+inicio_sesion()
 print(usuarios)
+
