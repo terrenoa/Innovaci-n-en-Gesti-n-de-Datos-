@@ -1,4 +1,6 @@
 import random
+import aritmetica
+import captcha
 
 usuarios = {}
 
@@ -30,6 +32,12 @@ def registrar_usuario():
     fecha_nacimiento = input("Ingrese su fecha de nacimiento (dd/mm/aaaa): ")
     nombre_usuario = input("Ingrese su nombre de usuario: ")
     clave = input("clave: ")
+
+    a= False
+    while a == False:
+        a = captcha.captcha()
+        print (a)
+
 
     usuarios[nombre_usuario] = {
     'nombre': nombre,

@@ -29,5 +29,5 @@ def promedio(*lista):
 
     
 
-a= promedio(1,1,1,1,1)
-print (a)
+#a= promedio(1,1,1,1,1)
+#print (a)
