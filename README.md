@@ -12,27 +12,10 @@
     Link Github: https://github.com/terrenoa/
     Ejericios: https://github.com/terrenoa/evidencia2/
 
-    Nombre y apellido: Emilio Masciarelli
-    Dni: 33600010
-    Correo electronico: emiliomasciarelli@gmail.com
-    Link Github: https://github.com/EmiARG
-    Ejercicios: https://github.com/EmiARG/solucionesPracticas
-
     Nombre y apellido: Gastón Di Campli
     Dni: 31055660
     Correo electronico: gaston.dicampli@gmail.com
     Link Github: https://github.com/Gdicampli22
-
-    Nombre y apellido: Maria Lourdes Romero
-    Dni: 46973418
-    Correo electronico: lourdesromero843@gmail.com
-    Link Github: https://github.com/luliromero
-    Ejercicios: https://github.com/luliromero/IP_BDI-ISPC/tree/master/Programaci%C3%B3n/solucionesPr%C3%A1cticas
-
-    Nombre y apellido: Lucila Natali Peire Moyano
-    Dni: 39498736
-    Correo electronico: lucipeire@gmail.com
-    Link Github: https://github.com/Lucipeire
 
 # Descripción del proyecto elegido y analisis EPS
 El proyecto propuesto para esta instancia es el desarrollo de una aplicacion que facitile la gestión y administración de un hospital.
