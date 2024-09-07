@@ -1,6 +1,7 @@
 import json #UTILIZAMOS LA LIBRERIA DE JAVA PARA CARGAR LOS ARCHiVOS .TXT DE MANERA MAS COMODA
 import captcha
 import validador_contraseñas
+from logins import registrar_inicio_sesion
 
 def cargar_usuarios(): ##ABRE EL ARCHIVO EN MODO LECTURA SOLAMENTE "r"
     with open("usuarios.txt", "r") as archivo:
@@ -17,6 +18,7 @@ def inicio_sesion():
         clave = input("Ingrese la contraseña: ")
         if usuarios[nombre_usuario]["clave"] == clave: 
             print("Bienvenido!!")
+            registrar_inicio_sesion(nombre_usuario) #REGISTRA CADA INCIO DE SESION!!
         else:
             print("CONTRASEÑA INCORRECTA!!\n")
             recovery = str(input("Olvido su contraseña? (Y/N)\n"))
