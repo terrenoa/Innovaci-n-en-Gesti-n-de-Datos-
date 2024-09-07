@@ -1,0 +1,26 @@
+{
+    "valen7776": {
+        "nombre": "Valentino",
+        "apellido": "Lorenzati",
+        "dni": "46508945",
+        "correo": "valentinolorenzati@gmail.com",
+        "fecha_nacimiento": "18/06/2005",
+        "clave": "123456"
+    },
+    "valen8000": {
+        "nombre": "Valentino",
+        "apellido": "Lorenzati",
+        "dni": "46508945",
+        "correo": "valentinolorenzati@gmail.com",
+        "fecha_nacimiento": "18/06/2005",
+        "clave": "123456"
+    },
+    "Lou2": {
+        "nombre": "Lorenzo",
+        "apellido": "Mendoza",
+        "dni": "43143089",
+        "correo": "lore@gmail.com",
+        "fecha_nacimiento": "07/01/2001",
+        "clave": "12345678V!"
+    }
+}

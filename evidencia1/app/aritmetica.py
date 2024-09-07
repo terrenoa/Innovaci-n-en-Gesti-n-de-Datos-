@@ -25,7 +25,7 @@ def div(v1,v2):
         return round((v1/v2),2)
     except:
         print("ERROR ERROR ERROR")
-        print ("no se puede dividir ntre 0")
+        print ("no se puede dividir entre 0")
 '''
     
 def sumar_n(*lista):
