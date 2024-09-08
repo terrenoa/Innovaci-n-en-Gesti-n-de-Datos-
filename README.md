@@ -16,8 +16,30 @@
     Dni: 31055660
     Correo electronico: gaston.dicampli@gmail.com
     Link Github: https://github.com/Gdicampli22
+# Módulo Gestión e Innovacion de Datos
 
-# Descripción del proyecto elegido y analisis EPS
+El presente informe describe el desarrollo de una aplicación de escritorio para la gestión 
+y administración de un hospital. Este proyecto intenta dar solución a la necesidad de centralizar 
+y simplificar la gestión de información en instituciones de salud, que manejan grandes 
+volúmenes de datos relacionados con pacientes, profesionales médicos, servicios, obras sociales 
+y turnos. La aplicación busca proporcionar a los administrativos del hospital una herramienta 
+eficiente, intuitiva y segura para realizar sus tareas diarias.
+La solución propuesta será desarrollada en el lenguaje de programación Python, 
+utilizando una base de datos relacional gestionada por MySQL. Este proyecto pretende dar 
+continuidad al desarrollo propuesto para el trabajo final del módulo programador del primer 
+semestre de la carrera.
+En línea con los objetivos de la cátedra, con el avance del proyecto se implementará el 
+uso de librerías específicas de Python tales como Pandas, Numpy y Matplotlib. Asimismo, se 
+implementará el paradigma de Programación Orientada a Objetos (POO), lo cual permitirá una 
+estructuración más clara y mantenible del código, facilitando su escalabilidad en el futuro.
+
+
+
+
+
+
+# módulo programador 1° semestre 2024
+## Descripción del proyecto elegido y analisis EPS
 El proyecto propuesto para esta instancia es el desarrollo de una aplicacion que facitile la gestión y administración de un hospital.
 El objetivo es centralizar la información respecto a:
 - Gestiones para Pacientes
