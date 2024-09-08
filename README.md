@@ -4,18 +4,18 @@
     Dni: 46508945
     Correo electronico: valentinolorenzati@gmail.com
     Link Github: https://github.com/VLorenzati
-    Ejercicios: https://github.com/VLorenzati/solucionesPracticas
 
     Nombre y apellido: Alejo Nicolás Terreno
     Dni: 42783052    
     Correo electronico: anterreno12@gmail.com
     Link Github: https://github.com/terrenoa/
-    Ejericios: https://github.com/terrenoa/evidencia2/
 
     Nombre y apellido: Gastón Di Campli
     Dni: 31055660
     Correo electronico: gaston.dicampli@gmail.com
     Link Github: https://github.com/Gdicampli22
+
+    
 # Módulo Gestión e Innovacion de Datos
 
 El presente informe describe el desarrollo de una aplicación de escritorio para la gestión 
