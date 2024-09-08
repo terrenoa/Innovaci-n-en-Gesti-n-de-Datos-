@@ -18,22 +18,35 @@
     
 # Módulo Gestión e Innovacion de Datos
 
-El presente informe describe el desarrollo de una aplicación de escritorio para la gestión 
+### Indice del repositorio
+'''
+├── evidencia1/
+│   ├── app/
+│   │   ├── aritmetica.py
+│   │   ├── captcha.py
+│   │   ├── logins.py
+│   │   ├── logs.txt
+│   │   ├── registrar.py
+│   │   ├── test_aritmetica.py
+│   │   ├── usuarios.txt
+│   │   └── validador_contraseñas.py
+│   ├── Informe.pdf
+├── modulo programador 1° semestre...
+├── README.md
+'''
+
+En el archivo '''Informe.pdf''' describe el desarrollo de una aplicación de escritorio para la gestión 
 y administración de un hospital. Este proyecto intenta dar solución a la necesidad de centralizar 
-y simplificar la gestión de información en instituciones de salud, que manejan grandes 
-volúmenes de datos relacionados con pacientes, profesionales médicos, servicios, obras sociales 
-y turnos. La aplicación busca proporcionar a los administrativos del hospital una herramienta 
+y simplificar la gestión de información en instituciones de salud, que manejan datos relacionados con pacientes, profesionales médicos, servicios, obras sociales y turnos. La aplicación busca proporcionar a los administrativos del hospital una herramienta 
 eficiente, intuitiva y segura para realizar sus tareas diarias.
-La solución propuesta será desarrollada en el lenguaje de programación Python, 
-utilizando una base de datos relacional gestionada por MySQL. Este proyecto pretende dar 
-continuidad al desarrollo propuesto para el trabajo final del módulo programador del primer 
-semestre de la carrera.
-En línea con los objetivos de la cátedra, con el avance del proyecto se implementará el 
-uso de librerías específicas de Python tales como Pandas, Numpy y Matplotlib. Asimismo, se 
-implementará el paradigma de Programación Orientada a Objetos (POO), lo cual permitirá una 
-estructuración más clara y mantenible del código, facilitando su escalabilidad en el futuro.
 
-
+En cuanto a los módulos de la app:
+- registrar.py: este módulo es el principal y funciona como INDEX de nuestra app. Integra los demás módulos, implementa las funciones de inicio de sesion y creación de nuevos usuarios. Se utulizo la libreria JSON para el manejo de archivos.
+- aritmetica.py: según lo solicitado en la consigna, contiene funciones para las operaciones artiméticas básicas. Luego es utilizado en el módulo captcha.py.
+- test_aritmetica.py: test del modulo anterior.
+- captcha.py: para confirmar la creación del usuario solicita al usuario hacer la suma de dos valoreas aleatorios entre 0 y 10. Hace uso de la libreria random y del módulo aritmetica.py
+- logins.py: haciendo uso de la libreria daytime se guardan cronologicamente los inicios de sesion en un archivo .txt
+- validador_contraseñas.py: nuclea las operaciones de solicitud y validacion de calves según los requerimientos de la consigna. Utiliza la libreria re para el manejo de cadena de caracteres
 
 
 
