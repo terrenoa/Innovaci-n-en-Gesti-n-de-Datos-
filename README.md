@@ -19,21 +19,22 @@
 # Módulo Gestión e Innovacion de Datos
 
 ### Indice del repositorio
-'''
-├── evidencia1/
-│   ├── app/
-│   │   ├── aritmetica.py
-│   │   ├── captcha.py
-│   │   ├── logins.py
-│   │   ├── logs.txt
-│   │   ├── registrar.py
-│   │   ├── test_aritmetica.py
-│   │   ├── usuarios.txt
-│   │   └── validador_contraseñas.py
-│   ├── Informe.pdf
-├── modulo programador 1° semestre...
-├── README.md
-'''
+
+
+    ├── evidencia1/
+    │   ├── app/
+    │   │   ├── aritmetica.py
+    │   │   ├── captcha.py
+    │   │   ├── logins.py
+    │   │   ├── logs.txt
+    │   │   ├── registrar.py
+    │   │   ├── test_aritmetica.py
+    │   │   ├── usuarios.txt
+    │   │   └── validador_contraseñas.py
+    │   ├── Informe.pdf
+    ├── modulo programador 1° semestre...
+    ├── README.md
+
 
 En el archivo '''Informe.pdf''' describe el desarrollo de una aplicación de escritorio para la gestión 
 y administración de un hospital. Este proyecto intenta dar solución a la necesidad de centralizar 
