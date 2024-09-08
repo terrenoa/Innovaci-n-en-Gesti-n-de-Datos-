@@ -49,3 +49,4 @@ En cuanto a los módulos de la app:
 - logins.py: haciendo uso de la libreria daytime se guardan cronologicamente los inicios de sesion en un archivo .txt
 - validador_contraseñas.py: nuclea las operaciones de solicitud y validacion de calves según los requerimientos de la consigna. Utiliza la libreria re para el manejo de cadena de caracteres
 
+*Mas detalle de la consigna de Base de Datos II, se encuentra escrito en Informe.pdf*
