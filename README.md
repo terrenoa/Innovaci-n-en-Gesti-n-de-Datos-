@@ -20,7 +20,10 @@
 
 ### Indice del repositorio
 
-
+    ├── evidencia2/
+    │   ├── BaseDeDatos/
+    │   │   ├── script_bd.sql
+    │   │   ├── DML.sql
     ├── evidencia1/
     │   ├── app/
     │   │   ├── aritmetica.py
