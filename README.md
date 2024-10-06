@@ -38,7 +38,14 @@
     ├── modulo programador 1° semestre...
     ├── README.md
 
+### Evidencia 2
+.
+.
+.
 
+
+
+### Evidencia 1
 En el archivo '''Informe.pdf''' describe el desarrollo de una aplicación de escritorio para la gestión 
 y administración de un hospital. Este proyecto intenta dar solución a la necesidad de centralizar 
 y simplificar la gestión de información en instituciones de salud, que manejan datos relacionados con pacientes, profesionales médicos, servicios, obras sociales y turnos. La aplicación busca proporcionar a los administrativos del hospital una herramienta 
