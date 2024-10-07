@@ -69,7 +69,20 @@ no es necesario instalar ninguna dependencia externa. Todos los requerimientos s
 3. **Ejecutar el programa**:
 Para ejecutar el programa inicialice el archivo main.py
 
+### Modulos
+-acceso.py: se define la clase acceso y el metodo repr que permite devolver información sobre el loggeo.
+-gestion_accesos.py: pide un usuario y contraseña. verifica que sea un usuario registrado y la contraseña sea correcta y registra en el archivo logs.txt si hay un intento fallido.
+-gestion de usuarios.py: se definen las funciones que permiten hacer CRUD de usuarios.
+-main.py: modulo principal, implementa los dos modulos anteriores.
+-modelos.py: define las clases Usuario y Acceso, las cuales representan a los usuarios del sistema y los accesos de estos, respectivamente. Usuario es una clase que encapsula la información de un usuario del sistema. Acceso es una clase que registra los eventos de inicio de sesión de los usuarios en el sistema, permitiendo almacenar tanto el inicio como la salida del usuario
+-usuario.py: deifne el metodo que permite obtener información de un usuario
+-utilidades.py: administra los archivos usuarios.ispc y accesos.ispcc
 
+
+<!-- Esto es un comentario vacío que genera espacio -->
+<!-- Esto es un comentario vacío que genera espacio -->
+<!-- Esto es un comentario vacío que genera espacio -->
+<!-- Esto es un comentario vacío que genera espacio -->
 ### Evidencia 1
 En el archivo '''Informe.pdf''' describe el desarrollo de una aplicación de escritorio para la gestión 
 y administración de un hospital. Este proyecto intenta dar solución a la necesidad de centralizar 
