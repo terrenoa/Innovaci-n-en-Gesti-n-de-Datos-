@@ -83,6 +83,7 @@ Para ejecutar el programa inicialice el archivo main.py
 <!-- Esto es un comentario vacío que genera espacio -->
 <!-- Esto es un comentario vacío que genera espacio -->
 <!-- Esto es un comentario vacío que genera espacio -->
+~~
 ### Evidencia 1
 En el archivo '''Informe.pdf''' describe el desarrollo de una aplicación de escritorio para la gestión 
 y administración de un hospital. Este proyecto intenta dar solución a la necesidad de centralizar 
@@ -98,3 +99,4 @@ En cuanto a los módulos de la app:
 - validador_contraseñas.py: nuclea las operaciones de solicitud y validacion de calves según los requerimientos de la consigna. Utiliza la libreria re para el manejo de cadena de caracteres
 
 *Mas detalle de la consigna de Base de Datos II, se encuentra escrito en Informe.pdf*
+~~
