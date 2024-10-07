@@ -24,6 +24,18 @@
     │   ├── BaseDeDatos/
     │   │   ├── script_bd.sql
     │   │   ├── DML.sql
+    │   ├── Aplicacion/
+    │   │   ├── acceso.py
+    │   │   ├── accesos.ispc
+    │   │   ├── gestion_accesos.py
+    │   │   ├── gestion_usuarios.py
+    │   │   ├── logs.txt
+    │   │   ├── main.py
+    │   │   ├── modelos.py
+    │   │   ├── prueba.py
+    │   │   ├── usuario.py
+    │   │   ├── usuarios.ispc
+    │   │   ├── utilidades.py
     ├── evidencia1/
     │   ├── app/
     │   │   ├── aritmetica.py
@@ -38,11 +50,24 @@
     ├── modulo programador 1° semestre...
     ├── README.md
 
-### Evidencia 2
-.
-.
-.
+## Evidencia 2
+### Descripción del proyecto
 
+Este proyecto es una aplicación en Python que implementa un sistema de gestión de usuarios y accesos utilizando el paradigma de la Programación Orientada a Objetos (POO). La aplicación permite realizar un CRUD de usuarios (Crear, Leer, Actualizar y Eliminar) y gestionar los accesos de los mismos, registrando tanto los intentos exitosos como fallidos en archivos binarios y de texto. Los datos de los usuarios se almacenan en un archivo binario, y los accesos se registran en un archivo separado, mientras que los intentos fallidos se guardan en un log de texto.
+
+### ¿Cómo ejecutar y probar este programa?
+
+1. **Clonar el repositorio**:
+   ```
+   git clone [[URL del repositorio]](https://github.com/terrenoa/Innovaci-n-en-Gesti-n-de-Datos)
+
+   ```
+
+2. **Instalar dependencias**:
+no es necesario instalar ninguna dependencia externa. Todos los requerimientos son nativos de python
+
+3. **Ejecutar el programa**:
+Para ejecutar el programa inicialice el archivo main.py
 
 
 ### Evidencia 1
