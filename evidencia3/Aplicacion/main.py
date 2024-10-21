@@ -3,6 +3,7 @@
 from gestion_usuarios import agregar_usuario, modificar_usuario, eliminar_usuario, buscar_usuario, mostrar_usuarios
 from gestion_accesos import registrar_acceso
 from datos_pluviales import datos_pluviales
+from datos_pluviales_panda import datos_pluviales_panda
 
 def menu_principal():
     while True:
@@ -31,7 +32,8 @@ def menu_principal():
         elif opcion == '6':
             registrar_acceso()
         elif opcion == '7':
-            datos_pluviales()
+            #datos_pluviales()
+            datos_pluviales_panda()
         elif opcion == '8':
             print("Saliendo del programa.")
             break

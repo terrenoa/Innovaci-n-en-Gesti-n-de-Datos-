@@ -16,6 +16,7 @@ def generar_datos_pluviales():
     return datos_anuales
 
 #para guardarlo como archivo
+'''
 def guardar_csv(datos_anuales, año):
     # crea un archivo con 12 columnas y 31 filas, conviene de esta forma porque es mas facil mostrar cuando se pide los datos de un solo mes
     archivo_csv = f"registro_pluvial_{año}.csv"
@@ -31,7 +32,29 @@ def guardar_csv(datos_anuales, año):
                 else:
                     fila.append('')  # Si el día no existe, añadimos una cadena vacía
             writer.writerow(fila)
+'''
+def guardar_csv(datos_anuales, año):
+    archivo_csv = f"registro_pluvial_{año}.csv"
+    
+    with open(archivo_csv, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        
+        # Encabezados
+        writer.writerow(['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
+        
+        # Escribir los datos día a día
+        for dia in range(31):  # Recorre hasta 31 días
+            fila = []
+            for mes in range(12):  # Recorre los 12 meses
+                if dia < len(datos_anuales[mes]):  # Si el día existe en el mes actual
+                    fila.append(datos_anuales[mes][dia])
+                else:
+                    fila.append('')  # Si el día no existe (para meses con menos de 31 días)
+            writer.writerow(fila)  # Escribe la fila completa (1 por día)
 
+    print(f"Archivo {archivo_csv} guardado correctamente.")
+
+    
 def leer_csv(archivo):
     with open(archivo, newline='') as file:
         reader = csv.reader(file)
