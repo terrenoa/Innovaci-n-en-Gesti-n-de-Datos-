@@ -2,6 +2,7 @@
 
 from gestion_usuarios import agregar_usuario, modificar_usuario, eliminar_usuario, buscar_usuario, mostrar_usuarios
 from gestion_accesos import registrar_acceso
+from datos_pluviales import datos_pluviales
 
 def menu_principal():
     while True:
@@ -12,7 +13,8 @@ def menu_principal():
         print("4. Buscar Usuario")
         print("5. Mostrar Todos los Usuarios")
         print("6. Ingresar al Sistema")
-        print("7. Salir")
+        print("7. NUEVO: Datos Pluviales")
+        print("8. Salir")
 
         opcion = input("Seleccione una opción: ")
 
@@ -29,6 +31,8 @@ def menu_principal():
         elif opcion == '6':
             registrar_acceso()
         elif opcion == '7':
+            datos_pluviales()
+        elif opcion == '8':
             print("Saliendo del programa.")
             break
         else:
