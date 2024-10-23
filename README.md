@@ -19,44 +19,68 @@
 # Módulo Gestión e Innovacion de Datos
 
 ### Indice del repositorio
+├── evidencia3/
+│   ├── BaseDeDatos/
+│   │   ├── crud_especialidad.py
+│   │   ├── crud_pacientes.py
+│   │   ├── crud_profesionales.py
+│   │   ├── crud_obrasocial.py
+│   │   ├── turnero.py
+│   │   ├── conexionbd.py
+│   ├── Aplicacion/
+│   │   ├── acceso.py
+│   │   ├── accesos.ispc
+│   │   ├── datos_pluviales.py
+│   │   ├── datos_pluviales_panda.py
+│   │   ├── gestion_accesos.py
+│   │   ├── gestion_usuarios.py
+│   │   ├── logs.txt
+│   │   ├── main.py
+│   │   ├── modelos.py
+│   │   ├── prueba.py
+│   │   ├── usuario.py
+│   │   ├── usuarios.ispc
+│   │   ├── utilidades.py
+|   ├── evidencia2/
+│   ├── BaseDeDatos/
+│   │   ├── script_bd.sql
+│   │   ├── DML.sql
+│   ├── Aplicacion/
+│   │   ├── acceso.py
+│   │   ├── accesos.ispc
+│   │   ├── gestion_accesos.py
+│   │   ├── gestion_usuarios.py
+│   │   ├── logs.txt
+│   │   ├── main.py
+│   │   ├── modelos.py
+│   │   ├── prueba.py
+│   │   ├── usuario.py
+│   │   ├── usuarios.ispc
+│   │   ├── utilidades.py
+├── evidencia1/
+│   ├── app/
+│   │   ├── aritmetica.py
+│   │   ├── captcha.py
+│   │   ├── logins.py
+│   │   ├── logs.txt
+│   │   ├── registrar.py
+│   │   ├── test_aritmetica.py
+│   │   ├── usuarios.txt
+│   │   └── validador_contraseñas.py
+│   ├── Informe.pdf
+├── modulo programador 1° semestre...
+├── README.md
 
-    ├── evidencia2/
-    │   ├── BaseDeDatos/
-    │   │   ├── script_bd.sql
-    │   │   ├── DML.sql
-    │   ├── Aplicacion/
-    │   │   ├── acceso.py
-    │   │   ├── accesos.ispc
-    │   │   ├── gestion_accesos.py
-    │   │   ├── gestion_usuarios.py
-    │   │   ├── logs.txt
-    │   │   ├── main.py
-    │   │   ├── modelos.py
-    │   │   ├── prueba.py
-    │   │   ├── usuario.py
-    │   │   ├── usuarios.ispc
-    │   │   ├── utilidades.py
-    ├── evidencia1/
-    │   ├── app/
-    │   │   ├── aritmetica.py
-    │   │   ├── captcha.py
-    │   │   ├── logins.py
-    │   │   ├── logs.txt
-    │   │   ├── registrar.py
-    │   │   ├── test_aritmetica.py
-    │   │   ├── usuarios.txt
-    │   │   └── validador_contraseñas.py
-    │   ├── Informe.pdf
-    ├── modulo programador 1° semestre...
-    ├── README.md
 
-## Evidencia 2
+## Evidencia 3
 ### Descripción del proyecto
 
-Este proyecto es una aplicación en Python que implementa un sistema de gestión de usuarios y accesos utilizando el paradigma de la Programación Orientada a Objetos (POO). La aplicación permite realizar un CRUD de usuarios (Crear, Leer, Actualizar y Eliminar) y gestionar los accesos de los mismos, registrando tanto los intentos exitosos como fallidos en archivos binarios y de texto. Los datos de los usuarios se almacenan en un archivo binario, y los accesos se registran en un archivo separado, mientras que los intentos fallidos se guardan en un log de texto.
+En esta evidencia numero 3, se continuo con los lineamientos seguidos hasta el momento agregando ademas las funcionalidades referidas a analisis de datos y algoritmos de ordenamiento.
+Para la implementacion para las librerias de analisis se implemento una nueva funcion en el programa referida al analisis a la informacion de datos pluviales la cual nos permite trabjar con archivos csv, generarlos si no existieran y hacer un analisis grafico de la funcion que contiene. Para la implmentacion de algoritmos de busqueda y ordenamientos se modificaron las opciones 4, 5, programadas en la evidencia anterior.
 
 ### ¿Cómo ejecutar y probar este programa?
-
+Para la ejecucion los requisitos son los mismo de la evidencia 2 y se les suma Pickle, Matplotlib, NumPy, Pandas.
+Para ser uso de la funcion 7, estan programados dos modulos, uno orientado a la utilizacion de listas anidadas y el otro haciendo uso de DataFrames. Para hacer uso de una de las dos hay que comentar la linea correspondiente de la funcion 7 en el archivo main.py
 1. **Clonar el repositorio**:
    ```
    git clone [[URL del repositorio]](https://github.com/terrenoa/Innovaci-n-en-Gesti-n-de-Datos)
@@ -69,14 +93,40 @@ no es necesario instalar ninguna dependencia externa. Todos los requerimientos s
 3. **Ejecutar el programa**:
 Para ejecutar el programa inicialice el archivo main.py
 
-### Modulos
-- acceso.py: se define la clase acceso y el metodo repr que permite devolver información sobre el loggeo.
-- gestion_accesos.py: pide un usuario y contraseña. verifica que sea un usuario registrado y la contraseña sea correcta y registra en el archivo logs.txt si hay un intento fallido.
-- gestion de usuarios.py: se definen las funciones que permiten hacer CRUD de usuarios.
-- main.py: modulo principal, implementa los dos modulos anteriores.
-- modelos.py: define las clases Usuario y Acceso, las cuales representan a los usuarios del sistema y los accesos de estos, respectivamente. Usuario es una clase que encapsula la información de un usuario del sistema. Acceso es una clase que registra los eventos de inicio de sesión de los usuarios en el sistema, permitiendo almacenar tanto el inicio como la salida del usuario
-- usuario.py: deifne el metodo que permite obtener información de un usuario
-- utilidades.py: administra los archivos usuarios.ispc y accesos.ispcc
+
+
+<!-- Esto es un comentario vacío que genera espacio -->
+<!-- Esto es un comentario vacío que genera espacio -->
+<!-- Esto es un comentario vacío que genera espacio -->
+<!-- Esto es un comentario vacío que genera espacio -->
+
+~~## Evidencia 2~~
+~~### Descripción del proyecto~~
+
+~~Este proyecto es una aplicación en Python que implementa un sistema de gestión de usuarios y accesos utilizando el paradigma de la Programación Orientada a Objetos (POO). La aplicación permite realizar un CRUD de usuarios (Crear, Leer, Actualizar y Eliminar) y gestionar los accesos de los mismos, registrando tanto los intentos exitosos como fallidos en archivos binarios y de texto. Los datos de los usuarios se almacenan en un archivo binario, y los accesos se registran en un archivo separado, mientras que los intentos fallidos se guardan en un log de texto.~~
+
+~~### ¿Cómo ejecutar y probar este programa?~~
+
+~~1. **Clonar el repositorio**:~~
+   ```
+   git clone [[URL del repositorio]](https://github.com/terrenoa/Innovaci-n-en-Gesti-n-de-Datos)
+
+   ```
+
+~~2. **Instalar dependencias**:~~
+~~no es necesario instalar ninguna dependencia externa. Todos los requerimientos son nativos de python~~
+
+~~3. **Ejecutar el programa**:~~
+~~Para ejecutar el programa inicialice el archivo main.py~~
+
+~~### Modulos~~
+~~- acceso.py: se define la clase acceso y el metodo repr que permite devolver información sobre el loggeo.~~
+~~- gestion_accesos.py: pide un usuario y contraseña. verifica que sea un usuario registrado y la contraseña sea correcta y registra en el archivo logs.txt si hay un intento fallido.~~
+~~- gestion de usuarios.py: se definen las funciones que permiten hacer CRUD de usuarios.~~
+~~- main.py: modulo principal, implementa los dos modulos anteriores.~~
+~~- modelos.py: define las clases Usuario y Acceso, las cuales representan a los usuarios del sistema y los accesos de estos, respectivamente. Usuario es una clase que encapsula la información de un usuario del sistema. Acceso es una clase que registra los eventos de inicio de sesión de los usuarios en el sistema, permitiendo almacenar tanto el inicio como la salida del usuario~~~
+~~- usuario.py: deifne el metodo que permite obtener información de un usuario~~
+~~- utilidades.py: administra los archivos usuarios.ispc y accesos.ispcc~~
 
 
 <!-- Esto es un comentario vacío que genera espacio -->
