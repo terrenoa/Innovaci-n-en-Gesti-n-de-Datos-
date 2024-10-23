@@ -18,59 +18,59 @@
     
 # Módulo Gestión e Innovacion de Datos
 
-### Indice del repositorio
-├── evidencia3/
-│   ├── BaseDeDatos/
-│   │   ├── crud_especialidad.py
-│   │   ├── crud_pacientes.py
-│   │   ├── crud_profesionales.py
-│   │   ├── crud_obrasocial.py
-│   │   ├── turnero.py
-│   │   ├── conexionbd.py
-│   ├── Aplicacion/
-│   │   ├── acceso.py
-│   │   ├── accesos.ispc
-│   │   ├── datos_pluviales.py
-│   │   ├── datos_pluviales_panda.py
-│   │   ├── gestion_accesos.py
-│   │   ├── gestion_usuarios.py
-│   │   ├── logs.txt
-│   │   ├── main.py
-│   │   ├── modelos.py
-│   │   ├── prueba.py
-│   │   ├── usuario.py
-│   │   ├── usuarios.ispc
-│   │   ├── utilidades.py
-|   ├── evidencia2/
-│   ├── BaseDeDatos/
-│   │   ├── script_bd.sql
-│   │   ├── DML.sql
-│   ├── Aplicacion/
-│   │   ├── acceso.py
-│   │   ├── accesos.ispc
-│   │   ├── gestion_accesos.py
-│   │   ├── gestion_usuarios.py
-│   │   ├── logs.txt
-│   │   ├── main.py
-│   │   ├── modelos.py
-│   │   ├── prueba.py
-│   │   ├── usuario.py
-│   │   ├── usuarios.ispc
-│   │   ├── utilidades.py
-├── evidencia1/
-│   ├── app/
-│   │   ├── aritmetica.py
-│   │   ├── captcha.py
-│   │   ├── logins.py
-│   │   ├── logs.txt
-│   │   ├── registrar.py
-│   │   ├── test_aritmetica.py
-│   │   ├── usuarios.txt
-│   │   └── validador_contraseñas.py
-│   ├── Informe.pdf
-├── modulo programador 1° semestre...
-├── README.md
-
+    ### Indice del repositorio
+    ├── evidencia3/
+    │   ├── BaseDeDatos/
+    │   │   ├── crud_especialidad.py
+    │   │   ├── crud_pacientes.py
+    │   │   ├── crud_profesionales.py
+    │   │   ├── crud_obrasocial.py
+    │   │   ├── turnero.py
+    │   │   ├── conexionbd.py
+    │   ├── Aplicacion/
+    │   │   ├── acceso.py
+    │   │   ├── accesos.ispc
+    │   │   ├── datos_pluviales.py
+    │   │   ├── datos_pluviales_panda.py
+    │   │   ├── gestion_accesos.py
+    │   │   ├── gestion_usuarios.py
+    │   │   ├── logs.txt
+    │   │   ├── main.py
+    │   │   ├── modelos.py
+    │   │   ├── prueba.py
+    │   │   ├── usuario.py
+    │   │   ├── usuarios.ispc
+    │   │   ├── utilidades.py
+    |   ├── evidencia2/
+    │   ├── BaseDeDatos/
+    │   │   ├── script_bd.sql
+    │   │   ├── DML.sql
+    │   ├── Aplicacion/
+    │   │   ├── acceso.py
+    │   │   ├── accesos.ispc
+    │   │   ├── gestion_accesos.py
+    │   │   ├── gestion_usuarios.py
+    │   │   ├── logs.txt
+    │   │   ├── main.py
+    │   │   ├── modelos.py
+    │   │   ├── prueba.py
+    │   │   ├── usuario.py
+    │   │   ├── usuarios.ispc
+    │   │   ├── utilidades.py
+    ├── evidencia1/
+    │   ├── app/
+    │   │   ├── aritmetica.py
+    │   │   ├── captcha.py
+    │   │   ├── logins.py
+    │   │   ├── logs.txt
+    │   │   ├── registrar.py
+    │   │   ├── test_aritmetica.py
+    │   │   ├── usuarios.txt
+    │   │   └── validador_contraseñas.py
+    │   ├── Informe.pdf
+    ├── modulo programador 1° semestre...
+    ├── README.md
+    
 
 ## Evidencia 3
 ### Descripción del proyecto
