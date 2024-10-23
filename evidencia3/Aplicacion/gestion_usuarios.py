@@ -69,6 +69,7 @@ def mostrar_usuarios():
         if opcion == 1:
             if not usuarios:
                 print("No hay usuarios registrados.")
+                break
             else:
                 for usuario in usuarios.values():
                     print(usuario)
@@ -78,3 +79,4 @@ def mostrar_usuarios():
             x = input()
             ordenar_usuarios(x)
             ver_ispc()
+            break

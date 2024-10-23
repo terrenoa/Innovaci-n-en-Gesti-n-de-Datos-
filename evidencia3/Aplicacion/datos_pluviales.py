@@ -10,11 +10,7 @@ def generar_datos_pluviales():
     datos_anuales = []
 
     for dias in dias_en_mes:
-<<<<<<< HEAD
         mes = [random.randint(0, 100) for _ in range(dias)]  # Genera lluvia aleatoria entre 0 y 100 mm
-=======
-        mes = [random.randint(0, 100) for _ in range(dias)]  # genera lluvia aleatoria entre 0 y 100 mm
->>>>>>> bf5b94711eee3278bbada9f86b83e8c7e31927da
         datos_anuales.append(mes)
     print(datos_anuales)
     return datos_anuales
@@ -61,11 +57,7 @@ def mostrar_datos_mes(datos_anuales, mes):
         print(f"Día {dia + 1}: {lluvia} mm")
 
 def generar_graficos(datos_anuales):
-<<<<<<< HEAD
     lluvia_total_mensual = [sum([lluvia for lluvia in mes if isinstance(lluvia, (int, float))]) for mes in datos_anuales]
-=======
-    lluvia_total_mensual = [sum(mes) for mes in datos_anuales]
->>>>>>> bf5b94711eee3278bbada9f86b83e8c7e31927da
     meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
              'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
     
@@ -78,7 +70,6 @@ def generar_graficos(datos_anuales):
     plt.tight_layout()
     plt.show()
 
-<<<<<<< HEAD
     # Gráfico de dispersión
     dias_por_mes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]  # Días por mes
     for mes_idx, mes in enumerate(meses):
@@ -90,19 +81,6 @@ def generar_graficos(datos_anuales):
     plt.ylabel('Día')
     plt.colorbar(label='Milímetros de lluvia')
     plt.show()
-=======
-    # grafico de dispersion
-    dias_por_mes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    plt.figure(figsize=(10, 5))
-    for mes_idx, mes in enumerate(meses):
-        dias = range(1, dias_por_mes[mes_idx] + 1) 
-        lluvia_del_mes = datos_anuales[mes_idx]
-        
-        # verifica que la cantidad de dias sea igual a la cantidad de datos de lluvia
-        if len(lluvia_del_mes) > 0:  # Aseguramos que haya datos de lluvia
-            plt.scatter([mes_idx + 1] * len(lluvia_del_mes), list(range(1, len(lluvia_del_mes) + 1)), 
-                        c=lluvia_del_mes, cmap='viridis', alpha=0.6, label=mes)
->>>>>>> bf5b94711eee3278bbada9f86b83e8c7e31927da
 
     plt.title('Lluvia diaria por Mes')
     plt.xlabel('Mes')
@@ -136,9 +114,6 @@ def datos_pluviales():
     mes = int(input("Ingrese el número del mes (1-12): ")) - 1
     mostrar_datos_mes(datos_anuales, mes)
 
-<<<<<<< HEAD
     # Generar gráficos
-=======
-    # generar garficos
->>>>>>> bf5b94711eee3278bbada9f86b83e8c7e31927da
     generar_graficos(datos_anuales)
+
