@@ -10,7 +10,7 @@ def generar_datos_pluviales():
     datos_anuales = []  # se inicia vacia porque aca se van a ir agregando los datos mensuales
 
     for dias in dias_en_mes:
-        mes = [random.uniform(0, 100) for _ in range(dias)]  # Genera lluvia aleatoria entre 0 y 100 mm
+        mes = [random.randint(0, 100) for _ in range(dias)]  # Genera lluvia aleatoria entre 0 y 100 mm
         datos_anuales.append(mes)
     print(datos_anuales)
     return datos_anuales
@@ -66,9 +66,9 @@ def mostrar_datos_mes(datos_anuales, mes):
         print(f"Día {dia + 1}: {lluvia} mm")
 
 def generar_graficos(datos_anuales):
-    # Gráfico de barras
-    lluvia_total_mensual = [sum(mes) for mes in datos_anuales]
-    meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+    lluvia_total_mensual = [sum([lluvia for lluvia in mes if isinstance(lluvia, (int, float))]) for mes in datos_anuales]
+    meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
+             'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
     
     plt.bar(meses, lluvia_total_mensual)
     plt.title('Lluvias anuales')
@@ -79,8 +79,10 @@ def generar_graficos(datos_anuales):
     plt.show()
 
     # Gráfico de dispersión
-    dias = range(1, 32)
+    dias_por_mes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]  # Días por mes
     for mes_idx, mes in enumerate(meses):
+        dias = range(1, dias_por_mes[mes_idx] + 1)
+        valores_lluvia = [lluvia for lluvia in datos_anuales[mes_idx] if isinstance(lluvia, (int, float))]
         plt.scatter([mes_idx + 1] * len(dias), dias[:len(datos_anuales[mes_idx])], c=datos_anuales[mes_idx])
     plt.title('Lluvia diaria')
     plt.xlabel('Mes')
@@ -92,6 +94,7 @@ def generar_graficos(datos_anuales):
     plt.pie(lluvia_total_mensual, labels=meses, autopct='%1.1f%%', startangle=90)
     plt.title('Distribución de lluvias por mes')
     plt.show()
+
 
 def datos_pluviales():
     año = input("Ingrese el año de la consulta de datos: : ")
@@ -111,4 +114,4 @@ def datos_pluviales():
     mostrar_datos_mes(datos_anuales, mes)
 
     # Generar gráficos
-   # generar_graficos(datos_anuales)
+    generar_graficos(datos_anuales)

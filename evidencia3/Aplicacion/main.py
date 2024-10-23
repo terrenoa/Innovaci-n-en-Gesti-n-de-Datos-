@@ -32,8 +32,8 @@ def menu_principal():
         elif opcion == '6':
             registrar_acceso()
         elif opcion == '7':
-            #datos_pluviales()
-            datos_pluviales_panda()
+            datos_pluviales()
+            #datos_pluviales_panda()
         elif opcion == '8':
             print("Saliendo del programa.")
             break
