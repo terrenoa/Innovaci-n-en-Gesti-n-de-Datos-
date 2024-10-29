@@ -1,7 +1,7 @@
 # gestion_usuarios.py
 
 from utilidades import cargar_usuarios, guardar_usuarios, ordenar_usuarios, ver_ispc
-from usuario import Usuario
+from modelos import Usuario
 
 def agregar_usuario():
     usuarios = cargar_usuarios()
@@ -14,8 +14,8 @@ def agregar_usuario():
 
     password = input("Ingrese la contraseña: ")
     email = input("Ingrese el email: ")
-
-    usuario = Usuario(id_usuario, username, password, email)
+    dni = input("Ingrese el DNI: ")
+    usuario = Usuario(id_usuario, dni, username, password, email)
     usuarios[username] = usuario
     guardar_usuarios(usuarios)
 
@@ -31,9 +31,11 @@ def modificar_usuario():
 
     password = input("Ingrese la nueva contraseña: ")
     email = input("Ingrese el nuevo email: ")
+    dni = input("Ingrese el nuevo DNI: ")
 
     usuarios[username].password = password
     usuarios[username].email = email
+    usuarios[username].dni = dni
     guardar_usuarios(usuarios)
 
     print(f"Usuario {username} modificado con éxito.")

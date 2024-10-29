@@ -1,8 +1,9 @@
 # Archivo: modelos.py
 
 class Usuario:
-    def __init__(self, user_id, username, password, email):
+    def __init__(self, user_id, dni, username, password, email):
         self._user_id = user_id
+        self._dni = dni
         self._username = username
         self._password = password
         self._email = email
@@ -15,6 +16,14 @@ class Usuario:
     @user_id.setter
     def user_id(self, value):
         self._user_id = value
+
+    @property
+    def dni(self):
+        return self._dni
+
+    @dni.setter
+    def dni(self, value):
+        self._dni = value
 
     @property
     def username(self):
@@ -39,6 +48,9 @@ class Usuario:
     @email.setter
     def email(self, value):
         self._email = value
+    
+    def __repr__(self):
+        return f"Usuario(id={self.user_id}, dni={self.dni}, username='{self.username}', email='{self.email}')"
 
 class Acceso:
     def __init__(self, acceso_id, fechaIngreso, usuarioLogueado, fechaSalida=None):
