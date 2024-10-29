@@ -86,35 +86,38 @@ def ver_ispc():
 
 
 
-def busqueda_secuencial(usuarios, username):
+def busqueda_secuencial(usuarios, valor_busqueda, campo_busqueda): #campo_busqueda = username o dni o email
     print("Busqueda realizada por tecnica de busqueda secuencial.")
     
-    if username in usuarios:
-        return usuarios[username]  
-    else:
-        return None 
+    for usuario in usuarios.values():
+        if getattr(usuario, campo_busqueda) == valor_busqueda:
+            return usuario
+    return None
 
 
-def busqueda_binaria(usuarios, username):
-    print("Busqueda realizada por tecnica de bsqueda binaria")
-    usernames = list(usuarios.keys())  
+def busqueda_binaria(usuarios, valor_busqueda, campo_busqueda):
+    print("Búsqueda realizada por técnica de búsqueda binaria")
+    usuarios_ordenados = sorted(usuarios.values(), key=lambda x: getattr(x, campo_busqueda))  # Ordenar por el campo
     inicio = 0
-    fin = len(usernames) - 1
+    fin = len(usuarios_ordenados) - 1
 
     while inicio <= fin:
         mid = (inicio + fin) // 2
-        if usernames[mid] == username:
-            return usuarios[usernames[mid]]
-        elif usernames[mid] < username:
+        valor_campo = getattr(usuarios_ordenados[mid], campo_busqueda)
+        
+        if valor_campo == valor_busqueda:
+            return usuarios_ordenados[mid]
+        elif valor_campo < valor_busqueda:
             inicio = mid + 1
         else:
             fin = mid - 1
 
-    return None  #por si no encuentra 
+    return None  # Por si no encuentra 
 
 
 def buscar_usuariov2():
-    username = input("Escribe el usuario a buscar:")
+    campo_busqueda = input("Ingrese el campo de busqueda (username, dni o email): ")
+    valor_busqueda = input("Escribe el usuario a buscar:")
     metodo = input("Elige el tipo de metodo: 1 para secuencial y 2 para el metodo binario: ")
     usuarios = cargar_usuarios()
 
@@ -125,7 +128,7 @@ def buscar_usuariov2():
     
     #ELEGIR MODO
     if metodo == '1':
-        resultado = busqueda_secuencial(usuarios, username)
+        resultado = busqueda_secuencial(usuarios, valor_busqueda, campo_busqueda)
     elif metodo == '2':
         usuarios_ordenados = ordenar_python(usuarios) # NECESARIO PARA EL METODO BINARIO
         resultado = busqueda_binaria(usuarios_ordenados, username)
@@ -137,8 +140,10 @@ def buscar_usuariov2():
         print(f"Usuario encontrado: {resultado}")
     else:
         print("Usuario no encontrado.")
-# prueb
 
+
+
+# prueb
 '''
 username = input("Escribe el usuario a buscar:")
 metodo = input("Elige el tipo de metodo: 1 para secuencial y 2 para el metodo binario: ")
