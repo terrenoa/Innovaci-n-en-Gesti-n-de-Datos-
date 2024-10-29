@@ -68,17 +68,25 @@ def mostrar_usuarios():
         print("1. Mostrar usuarios sin ordenar")
         print("2. Ordenar usuarios")
         opcion = input("Seleccione una opción: ")
-        if opcion == 1:
+        
+        if opcion == "1":
             if not usuarios:
                 print("No hay usuarios registrados.")
-                break
             else:
-                for usuario in usuarios.values():
-                    print(usuario)
-        else:
-            print("Para ordenar por burbuja ingresee b")
-            print("Para ordenar por python ingrese p")
-            x = input()
-            ordenar_usuarios(x)
-            ver_ispc()
+                ver_ispc()
             break
+        
+        elif opcion == "2":
+            print("Para ordenar por burbuja ingrese 'b'")
+            print("Para ordenar por Python ingrese 'p'")
+            x = input("Ingrese una opción de ordenamiento: ")
+            
+            if x in ["b", "p"]:
+                ordenar_usuarios(x)
+                ver_ispc()
+            else:
+                print("Opción de ordenamiento no válida.")
+            break
+        
+        else:
+            print("Opción no válida. Intente nuevamente.")
