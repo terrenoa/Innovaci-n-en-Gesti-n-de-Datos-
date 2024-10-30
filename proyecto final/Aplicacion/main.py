@@ -1,10 +1,10 @@
 # main.py
 
-from gestion_usuarios import agregar_usuario, modificar_usuario, eliminar_usuario, mostrar_usuarios
+from gestion_usuarios import agregar_usuario, modificar_usuario, eliminar_usuario, mostrar_usuarios, buscar_usuariov2
 from gestion_accesos import registrar_acceso
 from datos_pluviales import datos_pluviales
 from datos_pluviales_panda import datos_pluviales_panda
-from utilidades import buscar_usuariov2
+#from utilidades import buscar_usuariov2
 
 def menu_principal():
     while True:

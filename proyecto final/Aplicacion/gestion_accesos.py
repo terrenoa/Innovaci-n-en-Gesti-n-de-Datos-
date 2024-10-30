@@ -1,8 +1,24 @@
 # gestion_accesos.py
-
+import pickle
 from datetime import datetime
-from utilidades import cargar_usuarios, guardar_accesos, cargar_accesos
+from gestion_usuarios import cargar_usuarios
 from acceso import Acceso
+
+# Funciones Gestion de Acceso: 
+
+def cargar_accesos():
+    try:
+        with open('accesos.ispc', 'rb') as f:
+            return pickle.load(f)
+    except (FileNotFoundError, EOFError):
+        return []
+
+def guardar_accesos(acceso):
+    accesos = cargar_accesos()
+    accesos.append(acceso)
+
+    with open('accesos.ispc', 'wb') as f:
+        pickle.dump(accesos, f)
 
 def registrar_acceso():
     usuarios = cargar_usuarios()  # Asegurarse de cargar usuarios correctamente
