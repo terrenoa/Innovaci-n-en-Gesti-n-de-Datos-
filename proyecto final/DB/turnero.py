@@ -1,5 +1,6 @@
-from conexionbd import conectar
-
+from .conexionbd import conectar
+import mysql.connector
+from mysql.connector import Error
 
 def turno():
     cursor, conexion = conectar()
@@ -47,6 +48,8 @@ def turno():
     
     cursor.execute(sql, (dni_in, idProf_seleccion, idEspe_seleccion, f_h,))
     conexion.commit()
+    cursor.close()
+    conexion.close()
 
 def buscar_turno_dni():
     cursor, conexion = conectar()
@@ -54,7 +57,7 @@ def buscar_turno_dni():
     sql = ''' 
     SELECT t.idTurno, t.Pacientes_dni, p.nombre AS Paciente, t.Profesionales_idProfesionales, 
            pr.apellido AS Profesional, t.Especialidad_idEspecialidad, e.nombre AS Especialidad,
-           f_hora
+           f_hora, estado
     FROM turno t
     JOIN pacientes p ON t.Pacientes_dni = p.dni
     JOIN profesionales pr ON t.Profesionales_idProfesionales = pr.idProfesionales
@@ -69,9 +72,12 @@ def buscar_turno_dni():
         for resultado in resultados:
             print(f"ID Turno: {resultado[0]}, Paciente: {resultado[1]}, "
                   f"Profesional: {resultado[4]}, Especialidad: {resultado[6]}, "
-                  f"Fecha del turno: {resultado[7]}")
+                  f"Fecha del turno: {resultado[7]}, "
+                  f"Estado: {resultado[8]}.")
     else:
         print("No se encontraron turnos para el DNI ingresado.")
+    cursor.close()
+    conexion.close()
 
 def list_turno():
     cursor, conexion = conectar()
@@ -80,7 +86,7 @@ def list_turno():
     sql = ''' 
     SELECT t.idTurno, t.Pacientes_dni, p.nombre AS Paciente, t.Profesionales_idProfesionales, 
            pr.apellido AS Profesional, t.Especialidad_idEspecialidad, e.nombre AS Especialidad,
-           f_hora
+           f_hora, estado
     FROM turno t
     JOIN pacientes p ON t.Pacientes_dni = p.dni
     JOIN profesionales pr ON t.Profesionales_idProfesionales = pr.idProfesionales
@@ -91,3 +97,79 @@ def list_turno():
     resultados = cursor.fetchall()
     for resultado in resultados:
         print(f"-{resultado}")
+    cursor.close()
+    conexion.close()
+
+def cambiar_estado_turno(dni, nuevo_estado):
+    cursor, conexion = conectar()
+    estados_permitidos = ["pendiente", "aceptado", "cancelado"]
+    
+    if nuevo_estado not in estados_permitidos:
+        print("Estado no válido. Debe ser 'pendiente', 'aceptado' o 'cancelado'.")
+        return
+
+    cursor, conexion = conectar()
+    try:
+                sql = "UPDATE turno SET estado = %s WHERE Pacientes_dni = %s"
+                values = (nuevo_estado, dni)
+                cursor.execute(sql, values)
+                conexion.commit()
+                
+                if cursor.rowcount > 0:
+                    print(f"Estado del turno para el DNI {dni} cambiado a '{nuevo_estado}'.")
+                else:
+                    print(f"No se encontró un turno con el DNI {dni}.")
+    except Error as e:
+            print("Ocurrió un error al actualizar el estado:", e)
+    finally:
+            cursor.close()
+            conexion.close()
+
+
+
+def turnero():
+    # Implementación de la función
+    print("\n"*3)
+    print("*"*6+" Turnero "+"*"*6)
+
+    while True:
+        print('Elija una de las siguientes opciones:')
+        print('1. Crear Turno')
+        print('2. Buscar Turno por DNI')
+        print('3. Listado de Turnos por fecha')
+        print('4. Actualizar Estado de Turno')
+        print('5. Salir')
+    
+        option_pac = input('Ingrese la opción deseada: ')
+    
+        if option_pac == '1':
+            print("\n")
+            turno()
+
+
+        elif option_pac == '2':
+           print("\n")
+           buscar_turno_dni()
+    
+
+       
+
+        elif option_pac == '3':
+            print("\n")
+            print(("*")*25,"TURNOS",("*")*25)
+            list_turno()
+            print("\n")
+            
+        elif option_pac == '4':
+             print("\n")
+             dni = input("Ingrese el DNI del paciente a actualizar el turno: ")
+             nuevo_estado = input("¿A que estado quiere cambiar el Turno? (pendiente, aceptado, cancelado): ")
+             cambiar_estado_turno(dni, nuevo_estado)
+
+        elif option_pac == '5':
+            print('SESIÓN TERMINADA')
+            break
+        else:
+            print('OPCIÓN INVÁLIDA')
+        
+
