@@ -12,12 +12,11 @@ def cargar_usuarios():
     except (FileNotFoundError, EOFError):
         return {}
 
+
 def guardar_usuarios(usuarios):
     usuarios_ordenados = dict(sorted(usuarios.items(), key=lambda item: item[1].dni))
     with open('usuarios.ispc', 'wb') as f:
         pickle.dump(usuarios_ordenados, f)
-
-
 
 
 def ordenar_burbuja(usuarios):
@@ -42,6 +41,7 @@ def ordenar_python(usuarios):
     return usuarios_ordenados
 
 # Función para gestionar la opción de ordenamiento
+#esta funcion queda obsoleta con la implementacion de ordenar por username y que usuarios ispc este siempre por dni
 def ordenar_usuarios(opcion):
     usuarios = cargar_usuarios()
     
@@ -72,10 +72,20 @@ def ver_ispc():
         for username, datos in usuarios.items():
             print(f"Username: {username}, Datos: {datos}")
 
+def ver_ispc_ordenados_usuario():
 
-
-
-
+    try:
+        with open('usuariosOrdenadosPorUsername.ispc', 'rb') as f:
+            usuarios = pickle.load(f)
+    except (FileNotFoundError, EOFError):
+        print("error")
+    
+    
+    if not usuarios:
+        print("El archivo 'usuarios.ispc' está vacío o no existe.")
+    else:
+        for username, datos in usuarios.items():
+            print(f"Username: {username}, Datos: {datos}")
 
 
 def busqueda_secuencial(usuarios, valor_busqueda, campo_busqueda): #campo_busqueda = username o dni o email
@@ -194,11 +204,55 @@ def buscar_usuario():
     else:
         print("Usuario no encontrado.")
 
+
+
+#----------------------------------------------------------------------#
+# Ordenamiento por username
+
+def guardar_usuarios_ordenados_por_username(usuarios):
+    # Guardar los usuarios en un nuevo archivo ordenados por username
+    with open('usuariosOrdenadosPorUsername.ispc', 'wb') as f:
+        pickle.dump(usuarios, f)
+
+# Ordenamiento usando burbuja (por username)
+def ordenar_burbuja_por_username(usuarios):
+    usernames = list(usuarios.keys())
+    n = len(usernames)
+    
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if usernames[j] > usernames[j + 1]:
+                # Intercambiar los usernames
+                usernames[j], usernames[j + 1] = usernames[j + 1], usernames[j]
+    
+    # Reconstruir el diccionario ordenado por username
+    usuarios_ordenados = {username: usuarios[username] for username in usernames}
+    return usuarios_ordenados
+
+# Función para gestionar la opción de ordenamiento por username
+def ordenar_usuarios_por_username():
+    usuarios = cargar_usuarios()
+    
+    if not usuarios:
+        print("No hay usuarios para ordenar.")
+        return
+    
+    # Ordenar los usuarios por username usando burbuja
+    usuarios_ordenados = ordenar_burbuja_por_username(usuarios)
+    print("Usuarios ordenados por técnica de burbuja (por username).")
+    
+    # Guardar los usuarios ordenados en 'usuariosOrdenadosPorUsername.ispc'
+    guardar_usuarios_ordenados_por_username(usuarios_ordenados)
+    print("Usuarios ordenados y guardados en 'usuariosOrdenadosPorUsername.ispc'.")
+
+#----------------------------------------------------------------------------
+#funcion que se implementa en el main
+
 def mostrar_usuarios():
     usuarios = cargar_usuarios()
     while True:
-        print("1. Mostrar usuarios sin ordenar")
-        print("2. Ordenar usuarios")
+        print("1. Mostrar usuarios ordenados por DNI")
+        print("2. Mostrar usuarios ordenados por username")
         opcion = input("Seleccione una opción: ")
         
         if opcion == "1":
@@ -209,16 +263,6 @@ def mostrar_usuarios():
             break
         
         elif opcion == "2":
-            print("Para ordenar por burbuja ingrese 'b'")
-            print("Para ordenar por Python ingrese 'p'")
-            x = input("Ingrese una opción de ordenamiento: ")
-            
-            if x in ["b", "p"]:
-                ordenar_usuarios(x)
-                ver_ispc()
-            else:
-                print("Opción de ordenamiento no válida.")
-            break
-        
-        else:
-            print("Opción no válida. Intente nuevamente.")
+            ordenar_usuarios_por_username()
+            ver_ispc_ordenados_usuario()
+
