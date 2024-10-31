@@ -13,8 +13,9 @@ def cargar_usuarios():
         return {}
 
 def guardar_usuarios(usuarios):
+    usuarios_ordenados = dict(sorted(usuarios.items(), key=lambda item: item[1].dni))
     with open('usuarios.ispc', 'wb') as f:
-        pickle.dump(usuarios, f)
+        pickle.dump(usuarios_ordenados, f)
 
 
 
@@ -122,7 +123,7 @@ def buscar_usuariov2():
         resultado = busqueda_secuencial(usuarios, valor_busqueda, campo_busqueda)
     elif metodo == '2':
         usuarios_ordenados = ordenar_python(usuarios) # NECESARIO PARA EL METODO BINARIO
-        resultado = busqueda_binaria(usuarios_ordenados, username)
+        resultado = busqueda_binaria(usuarios_ordenados, valor_busqueda, campo_busqueda)
     else:
         print("Metodo de búsqueda no valido.")
         return None
