@@ -4,7 +4,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from gestion_usuarios import agregar_usuario, modificar_usuario, eliminar_usuario, mostrar_usuarios, buscar_usuariov2
 from gestion_accesos import registrar_acceso
-from datos_pluviales import datos_pluviales
+from datos_pluviales_panda import datos_pluviales_panda
 from DB.menu_db import menu_db
 
 def menu_principal():
@@ -61,7 +61,7 @@ def ingresar_sistema():
     menu_db()
 
 def analisis_datos():
-    datos_pluviales()
+    datos_pluviales_panda()
 
 if __name__ == "__main__":
     menu_principal()
