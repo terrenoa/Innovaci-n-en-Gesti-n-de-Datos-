@@ -2,7 +2,7 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from gestion_usuarios import agregar_usuario, modificar_usuario, eliminar_usuario, mostrar_usuarios, buscar_usuariov2
+from gestion_usuarios import agregar_usuario, modificar_usuario, eliminar_usuario, mostrar_usuarios, buscar_usuario
 from gestion_accesos import registrar_acceso, ver_accesos_ispc, mostrar_logs
 from datos_pluviales_panda import datos_pluviales_panda
 from DB.menu_db import menu_db
@@ -50,7 +50,7 @@ def menu_usuarios_accesos():
         elif opcion == '3':
             eliminar_usuario()
         elif opcion == '4':
-            buscar_usuariov2()
+            buscar_usuario()
         elif opcion == '5':
             mostrar_usuarios()
         elif opcion == '6':

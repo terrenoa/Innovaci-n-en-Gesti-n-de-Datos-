@@ -1,0 +1,9 @@
+Búsqueda Binaria por Username: buscando el username 'a'.
+Intento 1: username del usuario de la posición 0 es 'juan'.
+Buscar en la subsecuencia de la izquierda (posición 0 a -1).
+Búsqueda por Username: buscando el username 'a'.
+Usuario no encontrado usando búsqueda binaria.
+Buscando el username 'a' en el archivo original con búsqueda secuencial...
+Intento 2: Comparando 'a' con 'terrenoa'.
+Intento 3: Comparando 'a' con 'juan'.
+Se realizaron 3 intentos y no se encontró el username buscado.
