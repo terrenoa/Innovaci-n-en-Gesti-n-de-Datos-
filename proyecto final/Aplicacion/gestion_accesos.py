@@ -56,3 +56,27 @@ def registrar_acceso():
         # Registrar intento fallido
         with open("logs.txt", "a") as log_file:
             log_file.write(f"{datetime.now()}: Intento fallido con usuario '{username}'\n")
+
+def ver_accesos_ispc():
+    try:
+        with open('accesos.ispc', 'rb') as f:
+            accesos = pickle.load(f)
+    except (FileNotFoundError, EOFError, pickle.UnpicklingError) as e:
+        return f"Error: No se pudo abrir o leer el archivo 'accesos.ispc'. Detalles: {e}"
+    
+    if not accesos:
+        return "El archivo 'accesos.ispc' está vacío o no contiene datos válidos."
+    else:
+        output = []
+        for acceso in accesos:
+            output.append(f"Datos: {acceso}")
+            print(output)
+        return "\n".join(output)
+
+def mostrar_logs():
+    try:
+        with open('logs.txt', 'r', encoding='utf-8') as f:
+            for linea in f:
+                print(linea.strip())
+    except FileNotFoundError:
+        print("Error: No se pudo encontrar el archivo 'logs.txt'.")

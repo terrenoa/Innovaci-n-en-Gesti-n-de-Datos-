@@ -3,7 +3,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from gestion_usuarios import agregar_usuario, modificar_usuario, eliminar_usuario, mostrar_usuarios, buscar_usuariov2
-from gestion_accesos import registrar_acceso
+from gestion_accesos import registrar_acceso, ver_accesos_ispc, mostrar_logs
 from datos_pluviales_panda import datos_pluviales_panda
 from DB.menu_db import menu_db
 
@@ -37,7 +37,9 @@ def menu_usuarios_accesos():
         print("3. Eliminar Usuario")
         print("4. Buscar Usuario")
         print("5. Mostrar Todos los Usuarios")
-        print("6. Volver al Menú Principal")
+        print("6. Mostrar los Accesos (datos de accesos.ispc)")
+        print("7. Mostrar los logs de intentos fallidos")
+        print("8. Volver al Menú Principal")
 
         opcion = input("Seleccione una opción: ")
 
@@ -52,6 +54,10 @@ def menu_usuarios_accesos():
         elif opcion == '5':
             mostrar_usuarios()
         elif opcion == '6':
+            ver_accesos_ispc()
+        elif opcion == '7':
+            mostrar_logs()
+        elif opcion == '8':
             break
         else:
             print("Opción no válida, intente de nuevo.")
